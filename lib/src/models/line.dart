@@ -1,4 +1,4 @@
-import 'package:template/src/wisdom.dart';
+import 'package:template/src/widgets/wisdom_widget.dart';
 
 /// Who is speaking a [Line].
 enum Speaker {
@@ -9,7 +9,7 @@ enum Speaker {
   player,
 }
 
-/// A line of [Wisdom].
+/// A line of [WisdomWidget].
 class Line {
   /// Creates a new [Line] given some [content] and a [speaker].
   Line({

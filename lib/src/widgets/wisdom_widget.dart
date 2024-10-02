@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:template/src/line_widget.dart';
 import 'package:template/src/models/line.dart';
+import 'package:template/src/widgets/line_widget.dart';
 
 /// The text output.
-class Wisdom extends StatefulWidget {
-  /// Creates a new [Wisdom].
-  const Wisdom({
+class WisdomWidget extends StatefulWidget {
+  /// Creates a new [WisdomWidget].
+  const WisdomWidget({
     required this.lines,
     super.key,
   });
@@ -14,10 +14,10 @@ class Wisdom extends StatefulWidget {
   final List<Line> lines;
 
   @override
-  State<Wisdom> createState() => _WisdomState();
+  State<WisdomWidget> createState() => _WisdomWidgetState();
 }
 
-class _WisdomState extends State<Wisdom> {
+class _WisdomWidgetState extends State<WisdomWidget> {
   @override
   void initState() {
     super.initState();

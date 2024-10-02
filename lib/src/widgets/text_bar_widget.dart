@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 /// The text bar for user input.
-class TextBar extends StatefulWidget {
-  /// Creates a new [TextBar].
-  const TextBar({
+class TextBarWidget extends StatefulWidget {
+  /// Creates a new [TextBarWidget].
+  const TextBarWidget({
     super.key,
     this.onSubmit,
   });
@@ -13,10 +13,10 @@ class TextBar extends StatefulWidget {
   final void Function(String input)? onSubmit;
 
   @override
-  State<TextBar> createState() => _TextBarState();
+  State<TextBarWidget> createState() => _TextBarWidgetState();
 }
 
-class _TextBarState extends State<TextBar> {
+class _TextBarWidgetState extends State<TextBarWidget> {
   final _focusNode = FocusNode();
   final _textController = TextEditingController();
 
