@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template/src/line_widget.dart';
 import 'package:template/src/models/line.dart';
 
 /// The text output.
@@ -17,27 +18,9 @@ class Wisdom extends StatefulWidget {
 }
 
 class _WisdomState extends State<Wisdom> {
-  Widget _makeLine(Line line) {
-    Color color;
-    TextAlign textAlign;
-
-    if (line.speaker == Speaker.cronos) {
-      color = Colors.orange;
-      textAlign = TextAlign.start;
-    } else {
-      color = Colors.grey;
-      textAlign = TextAlign.end;
-    }
-
-    return Text(
-      line.content,
-      textAlign: textAlign,
-      style: TextStyle(
-        color: color,
-        fontSize: 32,
-        fontFamily: 'monospace',
-      ),
-    );
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override
@@ -48,7 +31,7 @@ class _WisdomState extends State<Wisdom> {
         shrinkWrap: true,
         itemBuilder: (_, index) {
           final line = widget.lines[index];
-          return _makeLine(line);
+          return LineWidget(line: line);
         },
         itemCount: widget.lines.length,
         padding: const EdgeInsets.symmetric(horizontal: 8),
