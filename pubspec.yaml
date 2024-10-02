@@ -1,5 +1,5 @@
 name: inktober_2024_clock
-description: An interactive game for Inktober ["Clock"], 2024.
+description: An interactive game for Inktober, 2024.
 version: 1.0.0+1
 repository: https://github.com/tytydraco/inktober_2024_clock
 publish_to: 'none'
