@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:template/src/models/line.dart';
+import 'package:template/src/util/cronus.dart';
 import 'package:template/src/widgets/text_bar_widget.dart';
 import 'package:template/src/widgets/wisdom_widget.dart';
 
@@ -13,18 +14,47 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  final _cronus = Cronus();
   final _lines = <Line>[];
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Start with the initial prompt.
+    setState(() {
+      _lines.add(
+        Line(
+          content: _cronus.speak(),
+          speaker: Speaker.cronos,
+        ),
+      );
+    });
+  }
 
   Future<void> _onPlayerSpeaks(String input) async {
     // Append our own text to the chat.
-    _lines.add(
-      Line(
-        content: input,
-        speaker: Speaker.player,
-      ),
-    );
+    setState(() {
+      _lines.add(
+        Line(
+          content: input,
+          speaker: Speaker.player,
+        ),
+      );
+    });
+
+    await Future<void>.delayed(const Duration(seconds: 1));
 
     // Handle the actual input.
+    final response = _cronus.speak(input);
+    setState(() {
+      _lines.add(
+        Line(
+          content: response,
+          speaker: Speaker.cronos,
+        ),
+      );
+    });
   }
 
   @override

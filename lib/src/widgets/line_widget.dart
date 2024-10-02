@@ -46,7 +46,7 @@ class _LineWidgetState extends State<LineWidget> {
       textAlign: textAlign,
       style: TextStyle(
         color: color,
-        fontSize: 32,
+        fontSize: 26,
         fontFamily: 'monospace',
       ),
     );

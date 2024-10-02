@@ -39,14 +39,14 @@ class _TextBarWidgetState extends State<TextBarWidget> {
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
         border: InputBorder.none,
-        hintText: 'start typing',
+        hintText: 'what is its name',
         hintStyle: TextStyle(
           color: Colors.grey.shade800,
         ),
       ),
       style: const TextStyle(
         color: Colors.white,
-        fontSize: 32,
+        fontSize: 26,
         fontFamily: 'monospace',
       ),
       cursorColor: Colors.white,

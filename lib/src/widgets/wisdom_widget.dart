@@ -18,16 +18,24 @@ class WisdomWidget extends StatefulWidget {
 }
 
 class _WisdomWidgetState extends State<WisdomWidget> {
-  @override
-  void initState() {
-    super.initState();
+  final _scrollController = ScrollController();
+
+  void _scrollDown() {
+    _scrollController.animateTo(
+      _scrollController.position.maxScrollExtent,
+      duration: const Duration(seconds: 1),
+      curve: Curves.fastOutSlowIn,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) => _scrollDown());
+
     return ScrollConfiguration(
       behavior: const MaterialScrollBehavior().copyWith(scrollbars: false),
       child: ListView.builder(
+        controller: _scrollController,
         shrinkWrap: true,
         itemBuilder: (_, index) {
           final line = widget.lines[index];

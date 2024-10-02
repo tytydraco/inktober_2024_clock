@@ -1,7 +1,7 @@
-name: template
-description: Description for this template project.
+name: inktober_2024_clock
+description: An interactive game for Inktober ["Clock"], 2024.
 version: 1.0.0+1
-repository: https://github.com/tytydraco/template
+repository: https://github.com/tytydraco/inktober_2024_clock
 publish_to: 'none'
 
 environment:
