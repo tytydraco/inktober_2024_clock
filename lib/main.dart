@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:template/src/screens/chat_screen.dart';
-import 'package:template/src/themes.dart';
+import 'package:inktober_2024_clock/src/screens/chat_screen.dart';
+import 'package:inktober_2024_clock/src/themes.dart';
 
 void main() {
   runApp(const ClockInktober2024());

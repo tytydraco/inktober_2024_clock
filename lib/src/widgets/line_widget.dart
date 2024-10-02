@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:template/src/models/line.dart';
+import 'package:inktober_2024_clock/src/models/line.dart';
 
 /// Widget for [Line].
 class LineWidget extends StatefulWidget {

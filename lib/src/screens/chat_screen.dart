@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:template/src/models/line.dart';
-import 'package:template/src/util/cronus.dart';
-import 'package:template/src/widgets/text_bar_widget.dart';
-import 'package:template/src/widgets/wisdom_widget.dart';
+import 'package:inktober_2024_clock/src/models/line.dart';
+import 'package:inktober_2024_clock/src/util/cronus.dart';
+import 'package:inktober_2024_clock/src/widgets/text_bar_widget.dart';
+import 'package:inktober_2024_clock/src/widgets/wisdom_widget.dart';
 
 /// The chat screen.
 class ChatScreen extends StatefulWidget {

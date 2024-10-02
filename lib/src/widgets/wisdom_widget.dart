@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:template/src/models/line.dart';
-import 'package:template/src/widgets/line_widget.dart';
+import 'package:inktober_2024_clock/src/models/line.dart';
+import 'package:inktober_2024_clock/src/widgets/line_widget.dart';
 
 /// The text output.
 class WisdomWidget extends StatefulWidget {

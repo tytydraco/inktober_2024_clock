@@ -1,4 +1,4 @@
-import 'package:template/src/widgets/wisdom_widget.dart';
+import 'package:inktober_2024_clock/src/widgets/wisdom_widget.dart';
 
 /// Who is speaking a [Line].
 enum Speaker {
